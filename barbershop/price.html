@@ -1,0 +1,152 @@
+<html lang="ru"><head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Барбершоп</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="inner-page">
+
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+        	<nav class="main-navigation">
+	          <ul>
+              <li class="inner-logo"><a href="index.html"></a></li>
+	            <li><a href="#">Информация</a></li>
+	            <li><a href="#">Новости</a></li>
+	            <li class="active"><a href="price.html">Прайс-лист</a></li>
+	            <li><a href="catalog.html">Магазин</a></li>
+	            <li><a href="#">Контакты</a></li>
+	          </ul>
+	        </nav>
+
+	        <div class="user-block">
+	          <a href="#" class="login">Вход</a>
+	        </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+
+        <div class="inner-page-title">
+          <h1 class="inner-page-title">
+            ПРАЙС-ЛИСТ
+          </h1>
+
+          <ul class="breadcrumps">
+            <li>главная</li>
+            <li>прайс-лист</li>
+          </ul>
+        </div>
+
+        <div class="inner-page-content">
+          <div class="big-heading">
+            <h2 class="big-title">
+              истинно мужская класика
+            </h2>
+          </div>
+        </div>
+
+        <div class="inner-columns">
+          <div class="inner-column-left">
+            <h2>мы используем только <br> лучшие средства:</h2>
+            <ul>
+              <li>BAXTER OF CALIFORNIA</li>
+              <li>MR NATTY</li>
+              <li>SUAVECITO</li>
+              <li>MALIN+GOETZ</li>
+            </ul>
+          </div>
+          <div class="inner-column-right">
+            <h2>цены на услуги <br> наших мастеров:</h2>
+            <table class="prices-table">
+              <tbody><tr>
+                <td>Стрижка</td>
+                <td class="price">1500 Р.</td>
+              </tr>
+              <tr>
+                <td>Стрижка бороды</td>
+                <td class="price">500 Р.</td>
+              </tr>
+              <tr>
+                <td>Накрутка усов</td>
+                <td class="price">350 Р.</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+
+
+        <div class="inner-columns">
+          
+          <div class="inner-column-left">
+            <h2>несколько слов о нас</h2>
+            <p>НАША ПАРИКМАХЕРСКАЯ ЗАНИМАЕТСЯ ИСКЛЮЧИТЕЛЬНО МУЖСКИМИ СТРИЖКАМИ. СТРИЖКА КАЖДОГО КЛИЕНТА ДЛЯ НАС - ЭТО УНИКАЛЬНАЯ И ПРОДУМАННАЯ ДО МЕЛОЧЕЙ РАБОТА. МЫ НЕ РАБОТАЕМ НА КОЛЛИЧЕСТВО, МЫ РАБОТАЕМ НА КАЧЕСТВО.</p>
+          </div>
+          <div class="inner-column-right">
+            <p>НАША МАСТЕРСКАЯ РАСПОЛОЖЕНА В ЦЕНТРЕ ГОРОДА, ПОЭТОМУ СДЕЛАТЬ СТИЛЬНУЮ СТРИЖКУ МОЖНО В ЛЮБОЕ ВРЕМЯ, ДАЖЕ В ОБЕДЕННЫЙ ПЕРЕРЫВ. ЗДЕСЬ ВЫ МОЖЕТЕ ПОГРУЗИТЬСЯ В УДОБНУЮ ДЛЯ ВАС ФТМОСФЕРУЮ, ЧУВСТВОВАТЬ СЕБЯ КОМФОРТНО И СВОБОДНО!</p>
+          </div>
+        </div>
+
+
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row d-flex jc-sb">
+        	<section class="footer-contacts">
+	          Барбершоп "Бородинский"<br>
+	          Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+	          <a class="how" href="#">Как нас найти?</a><br>
+	          Телефон: +7 (812) 666-02-66
+	        </section>
+
+	        <section class="footer-social">
+	          <p class="center">Давайте дружить!</p>
+	          <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+	          <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
+	          <a href="#" class="social-btn social-btn-inst">Инстаграм</a>
+	        </section>
+
+	        <section class="footer-copyright">
+	          <p class="center">Разработано:</p>
+	          <a href="https://htmlacademy.ru" class="btn">HTML Academy</a>
+	        </section>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <h2 class="modal-content-title">Личный кабинет</h2>
+      <p>Введите свой логин и пароль</p>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <input class="icon-user" type="text" name="login" placeholder="Логин">
+        <input class="icon-password" type="password" name="password" placeholder="Пароль">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember">
+          <span class="checkbox-indicator"></span> Запомнить меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+        <button class="btn" type="submit">Войти</button>
+      </form>
+    </div>
+
+    <div class="modal-content modal-content-map">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.320894616188014!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1481220973528" width="766" height="561" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+    </div>
+
+    <div class="modal-overlay"></div>
+
+    <script src="js/popup.min.js"></script>
+  
+
+</body></html>
