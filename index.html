@@ -3,35 +3,252 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dephiz</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
-		<ul class="menu">
-			<li><a href="#contact">Contacts</a></li>
-			<li><a href="#">Projects</a>
-				<ul>
-					<li><a href="https://dephiz.github.io/barbershop/">Barbershop</a></li>
-				</ul>
-			</li>
-			<li><a href="#resume"></a>Resume</li>
-		</ul>
+		<div class="menu-line">
+			<div class="container">
+				<div class="row">
+					<div class="logo"><span class="point">Dephiz</span></div>
+					<ul class="menu">
+						<li><a href="#hello">Привет</a></li>
+						<li><a href="#skills">Навыки</a></li>
+						<li><a href="#expiriense">Опыт</a></li>
+						<li><a href="#education">Образование</a></li>
+						<li id="dropdown"><a href="#">Портфолио</a></li>
+						<li><a href="#resume">Резюме</a></li>
+						<li><a href="#contact">Связь</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</header>
 	<main>
-		<section id="about">
-			<div class="title">About Me</div>
+		<section id="hello">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="about-me">
+							<div class="about-me-title">
+								<h1><span class="point">Я Антон Иванов</span></h1>
+							</div>
+							<div class="about-me-text">
+								<div class="opacity-box">
+									<p>
+										Я Web-разрабодчик, живущий в городе Стерлитамак республики Башкортостан.
+										Я работал в проектной команде Junior Web разработчиком в компании Pedant. В настоящее время я нигде не работаю и хочу устроиться в компанию, где бы мог 
+										повысить свои навыки в качестве Web-разработчика.
+									</p>
+								</div>
+							</div>
+							<div class="about-me-contacts">
+								<div class="contacts-info">
+										<span class="contacts-title">Телефон:</span>
+										<span class="contacts-text">+7-987-02-61-728</span>
+								</div>
+								<div class="contacts-info">
+									<span class="contacts-title">E-mail:</span>
+									<span class="contacts-text">anton.1va@yandex.ru</span>
+								</div>
+							</div>
+							<div class="about-buttons">
+								<div class="btn">
+									<a href="#">Написать мне</a>
+								</div>
+								<div class="btn">
+									<a href="#">Скачать резюме</a>
+								</div>
+							</div>			
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="about-img">
+							<figure>
+								<img src="img/laptop.jpg" width="100%" height="100%" alt="">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
-		<section id="resume">
-			<div class="title">Resume</div>
-		</section>
-		<section id="contact">
-			<div class="title">Contact</div>
-		</section>
-	</main>
-	<footer>
-		<div class="container">
-			<div class="coopyright">Created by Dephiz 2018</div>
+		<section id="skills">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h2>
+							<span class="point">
+								Навыки
+							</span>
+						</h2>
+						<div class="opacity-box">
+							<p>
+								У меня не так много опыта, но есть огромное желание развиваться и стать специалистом в области Web-разработки.  
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<h4>
+							Web разработка
+						</h4>
+						<div class="opacity-box">
+							<p>
+								Javascript, JAVA, Python, PHP, Go, Node.js, MongoDB, Redis, PostgreSQL, WebStorm. 
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<h4>
+							Frontend разработка
+						</h4>
+						<div class="opacity-box">
+							<p>
+								HTML, CSS, LESS, SASS, Bootstrap, Wordpress, Drupal, Phonegap / Cordova, Ionic, Foundation, Angular.js.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</footer>
+	</section>
+	<section id="expiriense">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h2>
+						<span class="point">
+							Опыт работы
+						</span>
+					</h2>
+					<div class="opacity-box">
+						<p>
+							Я проходил стажировку в компании Pedant. Работал разработчиком...
+						</p>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="single-ex">
+						<h4>
+							Стажер <span class="opacity-box">Pedant.ru</span>
+						</h4>
+						<p class="date">Август, 2018 - Сентябрь, 2018</p>
+						<div class="opacity-box">
+							<p>
+								Я проходил стажировку в компании Pedant. Работал разработчиком...
+							</p>
+						</div>
+					</div>
+					<hr>
+					<div class="single-ex">
+						<h4>
+							Стажер <span class="opacity-box">Pedant.ru</span>
+						</h4>
+						<p class="date">Август, 2018 - Сентябрь, 2018</p>
+						<div class="opacity-box">
+							<p>
+								Я проходил стажировку в компании Pedant. Работал разработчиком...
+							</p>
+						</div>
+					</div>
+					<hr>
+					<div class="single-ex">
+						<h4>
+							Стажер <span class="opacity-box">Pedant.ru</span>
+						</h4>
+						<p class="date">Август, 2018 - Сентябрь, 2018</p>
+						<div class="opacity-box">
+							<p>
+								Я проходил стажировку в компании Pedant. Работал разработчиком...
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="education">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h2>
+						<span class="point">
+							Образование
+						</span>
+					</h2>
+					<div class="opacity-box">
+						<p>
+							Я думаю, что образование - важнейший фундамент для будущего становления специалиста. Каждый день я стараюсь изучать что-то новое для себя.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="single-ex">
+						<h4>
+							Курс <span class="opacity-box">HTML Academy</span>
+						</h4>
+						<p class="date">Август, 2018 - Сентябрь, 2018</p>
+						<div class="opacity-box">
+							<p>
+								Я учился в Башкирском государственном университете по направлению прикладная математика и информатика. Получил степень бакалавра.
+							</p>
+						</div>
+					</div>
+					<hr>
+					<div class="single-ex">
+						<h4>
+							Высшее <span class="opacity-box">БашГУ</span>
+						</h4>
+						<p class="date">Август, 2018 - Сентябрь, 2018</p>
+						<div class="opacity-box">
+							<p>
+								Я учился в Башкирском государственном университете по направлению прикладная математика и информатика. Получил степень бакалавра.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h2>
+						<span class="point">
+							Связь
+						</span>
+					</h2>
+					<div class="opacity-box">
+						<p>
+							Я думаю, что образование - важнейший фундамент для будущего становления специалиста. Каждый день я стараюсь изучать что-то новое для себя.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="f-items">
+						<input class="f-item" type="text" placeholder="Имя" required>
+						<input class="f-item" type="E-mail" placeholder="E-mail" required>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="f-items">
+						<textarea class="form-field js-field-message" placeholder="Message" required=""></textarea>
+						<input class="btn" type="submit" value="Отправить сообщение">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer>
+	<div class="container">
+		<div class="coopyright opacity-box">Copyright Dephiz 2018</div>
+	</div>
+</footer>
+<script>
+	
+</script>
 </body>
 </html>
