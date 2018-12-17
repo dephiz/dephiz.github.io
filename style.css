@@ -49,6 +49,7 @@ section{
 }
 
 .point:after {
+	position: absolute;
     content: '.';
     color: #3333ff;
 }
