@@ -36,14 +36,6 @@
   border-bottom: 1px solid #EEF2F7;
 }
 
-.step{
-  display: none;
-}
-
-.step--active{
-  display: block;
-}
-
 .calculator-up-percents{
   font-family: Roboto Medium, sans-serif;
   padding-top: 16px;
@@ -53,6 +45,14 @@
 
 .calculator-input-data{
   margin-top: 31px;
+}
+
+.step{
+  display: none;
+}
+
+.step--active{
+  display: block;
 }
 
 /* ranges */
@@ -106,9 +106,9 @@
 
 .calculator__range-input::-webkit-outer-spin-button,
 .calculator__range-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .calculator__range-input-controls{
@@ -132,4 +132,95 @@
 .calculator-footer{
   padding: 0 46px;
   min-height: 194px;
+}
+
+.calculator-footer__blocks{
+  margin-top: 40px;
+  display: flex;
+}
+
+.calculator-footer__blocks-content{
+  margin-right: 66px;
+}
+
+.calculator-footer__blocks-content-caption{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #4F4F4F;
+  margin-bottom: 5px;
+}
+
+.calculator-footer__blocks-content-value{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+
+.calculator-footer__blocks-content-value-green{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #219653;
+}
+
+.calculator-footer__blocks-content-value-small{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  color: #4F4F4F;
+}
+
+.calculator-footer__blocks-return{
+  display: flex;
+}
+
+.calculator-footer__blocks-content-calendar{
+  margin-right: 14px;
+}
+
+.calculator-footer__blocks-content-caption-mt{
+  margin-top: 3px;
+}
+
+.calculator-footer__blocks-content-send{
+  width: 215px;
+  height: 60px;
+  background: #FFDD2D;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  border: none;
+  color: #333333;
+}
+
+.calculator-footer__blocks-content-fast{
+  display: flex;
+  margin-top: 14px;
+  justify-content: center;
+}
+
+.calculator-footer__blocks-content-fast-caption{
+  font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #219653;
+margin-left: 9px;
 }
