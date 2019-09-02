@@ -45,55 +45,78 @@
               </div>
             </div>
             <div id='2' class="step">
-              <div class="calculator__range-group">
-                <div class="calculator__range-items">
-                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="1000000" value="15000">
-                </div>
-                  <div class="calculator__range-input-group">
-                    <input class="calculator__range-input" type="number" name="" value="15000" min="15000" max="1000000">
-                    <div class="calculator__range-input-controls">
-                      <div class="calculator__range-input-plus">+</div>
-                      <div class="calculator__range-input-minus">-</div>
+              <div class="calculator__row">
+                <div class="calculator__inputs-group">
+                  <span class="calculator__input-label">Что в залог?</span>
+                  <div class="calculator__select-wrapper">
+                    <select id='type-select' class="calculator__select-type" class="" name="">
+                      <option value="" disabled selected>Выберите тип залога</option>
+                      <option value="pts">Авто под ПТС (остается у вас)</option>
+                      <option value="home">Недвижимость</option>
+                    </select>
+                  </div>
+                  <div class="step__auto">
+                    <span class="calculator__input-label">Марка и модель авто:</span>
+                    <input id="car-input" class="calculator__input" class="calculator__input" type="text" placeholder="Введите марку и модель автомобиля">
+                  </div>
+                  <div class="step__home">
+                    <span class="calculator__input-label">Тип недвижимости:</span>
+                    <div class="calculator__select-wrapper">
+                      <select id='home-input' class="calculator__select-type" class="" name="">
+                        <option value="" disabled selected>Выберите тип залога</option>
+                        <option value="Квартира">Квартира</option>
+                        <option value="Дом">Дом</option>
+                        <option value="Дача">Дача</option>
+                        <option value="Гараж">Гараж</option>
+                        <option value="Автосервис">Автосервис</option>
+                      </select>
                     </div>
                   </div>
-              </div>
-              <div class="calculator__range-group">
-                <div class="calculator__range-items">
-                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="1000000" value="15000">
                 </div>
-                  <div class="calculator__range-input-group">
-                    <input class="calculator__range-input" type="number" name="" value="15000" min="15000" max="1000000">
-                    <div class="calculator__range-input-controls">
-                      <div class="calculator__range-input-plus">+</div>
-                      <div class="calculator__range-input-minus">-</div>
+                <div class="calculator__card-wrapper">
+                  <div class="calculator__card">
+                    <div class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--doc">Залог</span>
+                      <span id="credit-type" class="card-item__val">?</span>
+                    </div>
+                    <div id='card-item-car' class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--car">Модель</span>
+                      <span id="car-type" class="card-item__val">?</span>
+                    </div>
+                    <div id='card-item-home' class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--home">Тип:</span>
+                      <span id="home-type" class="card-item__val">?</span>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
             <div id='3' class="step">
-              <div class="calculator__range-group">
-                <div class="calculator__range-items">
-                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="0" value="0">
+              <div class="calculator__row">
+                <div class="calculator__inputs-group">
+                  <span class="calculator__input-label">ФИО:</span>
+                  <input id="calc-fio" class="calculator__input" class="calculator__input" type="text" placeholder="Иванов Иван Иванович">
+                  <div class="margin-top-26">
+                    <span class="calculator__input-label">Телефон:</span>
+                    <input id="calc-phone" class="calculator__input" class="calculator__input" type="text" placeholder="+7 (___) ___ - __ - __">
+                  </div>
                 </div>
-                  <div class="calculator__range-input-group">
-                    <input class="calculator__range-input" type="number" name="" value="15000" min="0" max="0">
-                    <div class="calculator__range-input-controls">
-                      <div class="calculator__range-input-plus">+</div>
-                      <div class="calculator__range-input-minus">-</div>
+                <div class="calculator__card-wrapper">
+                  <div class="calculator__card">
+                    <div class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--doc">Залог</span>
+                      <span id="credit-type" class="card-item__val">?</span>
+                    </div>
+                    <div id='card-item-car' class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--car">Модель</span>
+                      <span id="car-type" class="card-item__val">?</span>
+                    </div>
+                    <div id='card-item-home' class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--home">Тип:</span>
+                      <span id="home-type" class="card-item__val">?</span>
                     </div>
                   </div>
-              </div>
-              <div class="calculator__range-group">
-                <div class="calculator__range-items">
-                  <input class="calculator__range" type="range" id="range" name="range" min="0" max="1000000" value="0">
                 </div>
-                  <div class="calculator__range-input-group">
-                    <input class="calculator__range-input" type="number" name="" value="0" min="15000" max="0">
-                    <div class="calculator__range-input-controls">
-                      <div class="calculator__range-input-plus">+</div>
-                      <div class="calculator__range-input-minus">-</div>
-                    </div>
-                  </div>
               </div>
             </div>
           </div>
@@ -139,11 +162,12 @@
       </div>
     </form>
   </div>
-  <script src="js/script.js"></script>
-  <script src="js/range.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <script src="js/range.js"></script>
+  <script src="js/type-select.js"></script>
 </body>
 </html>
