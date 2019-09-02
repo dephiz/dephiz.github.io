@@ -21,25 +21,25 @@
             <div id='1' class="step step--active">
               <div class="calculator__range-group">
                 <div class="calculator__range-items">
-                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="1000000" value="15000">
+                  <input class="calculator__range" type="range" id="range-sum" name="range" step="1000" min="0" max="1000000" value="0">
                 </div>
                   <div class="calculator__range-input-group">
-                    <input class="calculator__range-input" type="number" name="" value="15000" min="15000" max="1000000">
+                    <input class="calculator__range-input" type="number" id="range-sum-caption" name="" value="0" min="0" max="1000000">
                     <div class="calculator__range-input-controls">
-                      <div class="calculator__range-input-plus">+</div>
-                      <div class="calculator__range-input-minus">-</div>
+                      <div id="range-sum-plus" class="calculator__range-input-plus">+</div>
+                      <div id="range-sum-minus" class="calculator__range-input-minus">-</div>
                     </div>
                   </div>
               </div>
               <div class="calculator__range-group">
                 <div class="calculator__range-items">
-                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="1000000" value="15000">
+                  <input class="calculator__range" type="range" id="range-time" name="range" min="0" max="36" value="0">
                 </div>
                   <div class="calculator__range-input-group">
-                    <input class="calculator__range-input" type="number" name="" value="15000" min="15000" max="1000000">
+                    <input class="calculator__range-input" type="number" id="range-time-caption" name="" value="0" min="15000" max="1000000">
                     <div class="calculator__range-input-controls">
-                      <div class="calculator__range-input-plus">+</div>
-                      <div class="calculator__range-input-minus">-</div>
+                      <div id="range-time-plus" class="calculator__range-input-plus">+</div>
+                      <div id="range-time-minus" class="calculator__range-input-minus">-</div>
                     </div>
                   </div>
               </div>
@@ -125,16 +125,16 @@
           <div class="calculator-footer__blocks">
             <div class="calculator-footer__blocks-content">
               <div class="calculator-footer__blocks-content-caption">Ежемесячный платёж</div>
-              <div class="calculator-footer__blocks-content-value">18 000 ₽</div>
+              <div id="monthly-payment" class="calculator-footer__blocks-content-value">0 ₽</div>
             </div>
 
             <div class="calculator-footer__blocks-content">
               <div class="calculator-footer__blocks-content-caption">Сумма к возврату</div>
-              <div class="calculator-footer__blocks-content-value">18 000 ₽</div>
+              <div id="return-sum" class="calculator-footer__blocks-content-value">0 ₽</div>
             </div>
 
             <div class="calculator-footer__blocks-content">
-              <div class="calculator-footer__blocks-content-caption">Ставка</div>
+              <div class="calculator-footer__blocks-content-caption">Ставка в год</div>
               <div class="calculator-footer__blocks-content-value" ><span class="calculator-footer__blocks-content-value-small">  От  &nbsp </span>  <span class="calculator-footer__blocks-content-value-green">   36% </span></div>
             </div>
 
