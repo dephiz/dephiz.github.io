@@ -137,6 +137,7 @@
 .calculator-footer__blocks{
   margin-top: 40px;
   display: flex;
+  justify-content: space-between;
 }
 
 .calculator-footer__blocks-content{
@@ -219,9 +220,148 @@
 
 .calculator-footer__blocks-content-fast-caption{
   font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 21px;
-color: #219653;
-margin-left: 9px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #219653;
+  margin-left: 9px;
+}
+
+
+
+/* step 2 */
+.calculator__row{
+  display: flex;
+}
+
+.calculator__inputs-group{
+  flex: 1 auto;
+  margin-right: 71px;
+}
+
+.calculator__input-label{
+  font-size: 18px;
+}
+
+.calculator__select-wrapper{
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.calculator__select-wrapper::after{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+  content: '';
+  display: block;
+  width: 16.78px;
+  height: 9px;
+  background: url(images/arrow.png);
+}
+
+.calculator__select-type{
+  width: 100%;
+  padding-left: 19px;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+  background: #EEF2F7;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.calculator__select-type:focus{
+  outline: none;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+/* card */
+
+.calculator__card-wrapper{
+  margin-top: 31px;
+  width: 382px;
+}
+
+.calculator__card{
+  padding: 12px 20px;
+  background: #FFDD2D;
+  border-radius: 5px;
+}
+
+.card-item{
+  font-family: 'Roboto Medium', sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-item:not(:first-child){
+  margin-top: 15px;
+}
+
+.card-item__title{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card-item-title--doc::before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(images/contract.png) center no-repeat;
+}
+
+.card-item-title--car::before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(images/car-icon.png) center no-repeat;
+}
+
+.card-item-title--home::before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(images/home-icon.png) center no-repeat;
+}
+
+.margin-top-26{
+  margin-top: 26px;
+}
+
+#card-item-home, #card-item-car{
+  display: none;
+}
+
+.step__auto, .step__home{
+  display: none;
+  margin-top: 26px;
+}
+
+.calculator__input{
+  outline: none;
+  margin-top: 10px;
+  width: 100%;
+  background: #EEF2F7;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  padding: 15px 0;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
