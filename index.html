@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=`device-width`, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <form action="">
+      <div id="calculator" class="calculator">
+        <div class="calculator-header">
+          <div class="calculator-step">Заполните данные (шаг 1 из 3)</div>
+          <div class="calculator-progress">10% - вероятность одобрения займа</div>
+        </div>
+        <div class="calculator-body">
+          <div class="calculator-up-percents">+23% за выбор суммы займа</div>
+          <div class="calculator-input-data">
+            <div id='1' class="step step--active">
+              <div class="calculator__range-group">
+                <div class="calculator__range-items">
+                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="1000000" value="15000">
+                </div>
+                  <div class="calculator__range-input-group">
+                    <input class="calculator__range-input" type="number" name="" value="15000" min="15000" max="1000000">
+                    <div class="calculator__range-input-controls">
+                      <div class="calculator__range-input-plus">+</div>
+                      <div class="calculator__range-input-minus">-</div>
+                    </div>
+                  </div>
+              </div>
+              <div class="calculator__range-group">
+                <div class="calculator__range-items">
+                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="1000000" value="15000">
+                </div>
+                  <div class="calculator__range-input-group">
+                    <input class="calculator__range-input" type="number" name="" value="15000" min="15000" max="1000000">
+                    <div class="calculator__range-input-controls">
+                      <div class="calculator__range-input-plus">+</div>
+                      <div class="calculator__range-input-minus">-</div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div id='2' class="step">
+              <div class="calculator__range-group">
+                <div class="calculator__range-items">
+                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="1000000" value="15000">
+                </div>
+                  <div class="calculator__range-input-group">
+                    <input class="calculator__range-input" type="number" name="" value="15000" min="15000" max="1000000">
+                    <div class="calculator__range-input-controls">
+                      <div class="calculator__range-input-plus">+</div>
+                      <div class="calculator__range-input-minus">-</div>
+                    </div>
+                  </div>
+              </div>
+              <div class="calculator__range-group">
+                <div class="calculator__range-items">
+                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="1000000" value="15000">
+                </div>
+                  <div class="calculator__range-input-group">
+                    <input class="calculator__range-input" type="number" name="" value="15000" min="15000" max="1000000">
+                    <div class="calculator__range-input-controls">
+                      <div class="calculator__range-input-plus">+</div>
+                      <div class="calculator__range-input-minus">-</div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div id='3' class="step">
+              <div class="calculator__range-group">
+                <div class="calculator__range-items">
+                  <input class="calculator__range" type="range" id="range" name="range" min="15000" max="0" value="0">
+                </div>
+                  <div class="calculator__range-input-group">
+                    <input class="calculator__range-input" type="number" name="" value="15000" min="0" max="0">
+                    <div class="calculator__range-input-controls">
+                      <div class="calculator__range-input-plus">+</div>
+                      <div class="calculator__range-input-minus">-</div>
+                    </div>
+                  </div>
+              </div>
+              <div class="calculator__range-group">
+                <div class="calculator__range-items">
+                  <input class="calculator__range" type="range" id="range" name="range" min="0" max="1000000" value="0">
+                </div>
+                  <div class="calculator__range-input-group">
+                    <input class="calculator__range-input" type="number" name="" value="0" min="15000" max="0">
+                    <div class="calculator__range-input-controls">
+                      <div class="calculator__range-input-plus">+</div>
+                      <div class="calculator__range-input-minus">-</div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="calculator-footer">
+          <div id="next-btn" onclick="next()">Следующиий</div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</body>
+</html>
