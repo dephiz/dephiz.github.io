@@ -28,6 +28,14 @@ $(document).ready(function(){
       calc();
   });
 
+  $( "#range-sum-caption" ).blur(function() {
+    if ($("#range-sum-caption").val() === '') {$("#range-sum-caption").val('0');}
+  });
+
+  $( "#range-time-caption" ).blur(function() {
+    if ($("#range-time-caption").val() === ''){$("#range-time-caption").val('0');}
+  });
+
   $( "#range-sum-caption" ).keyup(function() {
     $('#range-sum').val($(this).val());
     if ($(this).val() > 1000000){$('#range-sum').val(1000000); $(this).val(1000000)}
