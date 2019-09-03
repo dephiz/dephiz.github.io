@@ -11,12 +11,19 @@ function showTab(n) {
 
 function next() {
   if(++currentTab <= maxTub){
+    if(currentTab > 0 && currentTab < maxTub){
+      showPrevBtn();
+    } else {
+      hidePrevBtn();
+    }
+
     if(currentTab == 1){
       if(StepOneHasError()){
         alert("Заполните все поля калькулятора!");
         --currentTab;
         return;
       }
+      $('#calculator-up-percents').text('+4% за выбор типа залога');
       progressAddPercent(9);
     }
 
@@ -26,6 +33,8 @@ function next() {
         --currentTab;
         return;
       }
+      $('#calculator-up-percents').text('+3% за ввод ФИО');
+      $('#next-btn').text('Отправить');
       addInfoToCard();
       progressAddPercent(1);
     }
@@ -42,12 +51,31 @@ function next() {
           return;
         }
       }
-
       $('.calculator-step').text('Все шаги пройдены');
     }
 
     showTab(currentTab);
   }
+}
+
+function prev(){
+  --currentTab;
+  $('#next-btn').text('Далее');
+  if(currentTab == 0){
+    $('#calculator-up-percents').text('+9% за следующий шаг');
+    progressSubtractPercent(9);
+  } else {
+    $('#calculator-up-percents').text('+1% за следующий шаг');
+    progressSubtractPercent(1);
+  }
+
+  if(currentTab > 0 && currentTab < maxTub){
+    showPrevBtn();
+  } else {
+    hidePrevBtn();
+  }
+
+  showTab(currentTab);
 }
 
 function fixStepIndicator(n) {
@@ -60,20 +88,6 @@ function fixStepIndicator(n) {
   // Ставим номер шага в шапку
   $('#step-number').text(n + 1);
 
-  if(n == 1){
-    $('#calculator-up-percents').text('+4% за выбор типа залога');
-  }
-
-  if(n == 2){
-    $('#calculator-up-percents').text('3% за ввод ФИО');
-    $('#next-btn').text('Отправить');
-  } else {
-    $('#next-btn').text('Далее');
-  }
-
-  if(n == 3){
-    $('#calculator-up-percents').text('');
-  }
 }
 
 function addInfoToCard(){
@@ -138,4 +152,12 @@ function StepThreeHasError(){
   } else {
     return false;
   }
+}
+
+function showPrevBtn() {
+  $('#prev-btn').show();
+}
+
+function hidePrevBtn() {
+  $('#prev-btn').hide();
 }

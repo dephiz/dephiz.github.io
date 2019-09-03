@@ -13,6 +13,30 @@
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+.calculator-header{
+  position: relative;
+}
+
+.calculator-prev{
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  font-size: 18px;
+  color: #fff;
+  top: 24px;
+  left: 75px;
+}
+
+.calculator-prev::before{
+  content: '';
+  position: absolute;
+  left: -30px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(images/prev.png) center no-repeat;
+}
+
 .calculator-step{
   height: 70px;
   text-align: center;
