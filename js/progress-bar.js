@@ -19,10 +19,18 @@ $('#range-sum').on('input', function(){
   if(!sumChanged){
     sumChanged = true;
     progressAddPercent(23);
+
+    if($('#range-time').val() == 0){
+      $('#calculator-up-percents').text('+23% за выбор срока займа');
+    } else {
+      $('#calculator-up-percents').text('+9% к следующему шагу');
+    }
   } else {
     if($(this).val() == 0){
       sumChanged = false;
       progressSubtractPercent(23);
+
+      $('#calculator-up-percents').text('+23% за выбор суммы займа');
     }
   }
 });
@@ -43,10 +51,18 @@ $('#range-time').on('input', function(){
   if(!monthChanged){
     monthChanged = true;
     progressAddPercent(23);
+
+    if($('#range-sum').val() == 0){
+      $('#calculator-up-percents').text('+23% за выбор суммы займа');
+    } else {
+      $('#calculator-up-percents').text('+9% к следующему шагу');
+    }
   } else {
     if($(this).val() == 0){
       monthChanged = false;
       progressSubtractPercent(23);
+
+      $('#calculator-up-percents').text('+23% за выбор срока займа');
     }
   }
 });
