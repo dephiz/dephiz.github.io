@@ -29,11 +29,11 @@ $(document).ready(function(){
   });
 
   $( "#range-sum-caption" ).blur(function() {
-    if ($("#range-sum-caption").val() === '') {$("#range-sum-caption").val('0');}
+    if ($("#range-sum-caption").val() === '') {$("#range-sum-caption").val('0');$("#range-sum").val(0);calc();}
   });
 
   $( "#range-time-caption" ).blur(function() {
-    if ($("#range-time-caption").val() === ''){$("#range-time-caption").val('0');}
+    if ($("#range-time-caption").val() === ''){$("#range-time-caption").val('0');$("#range-time").val(0);calc();}
   });
 
   $( "#range-sum-caption" ).keyup(function() {
