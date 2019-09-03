@@ -5,6 +5,7 @@ $(document).ready(function(){
 
   $( "#range-sum" ).mousemove(function() {
     $("#range-sum-caption").val( $(this).val() );
+
     calc();
   });
 
@@ -38,6 +39,7 @@ $(document).ready(function(){
 
   $( "#range-time" ).mousemove(function() {
     $("#range-time-caption").val( $(this).val() );
+
       calc();
   });
 
@@ -69,6 +71,14 @@ $(document).ready(function(){
   function calc(){
     let z = parseInt($('#range-time').val(), 10);
     let s = parseInt($('#range-sum').val(), 10);
+
+    let percent1 = $("#range-sum").val() / 1000000 * 100;
+    $("#range-sum").css('background', 'linear-gradient(90deg, rgba(33,150,83,1)'+ percent1 +'%, rgba(238,242,247,1)'+ percent1+'%)');
+
+    let percent2 = $("#range-time").val() / 36 * 100;
+    $("#range-time").css('background', 'linear-gradient(90deg, rgba(33,150,83,1)'+ percent2 +'%, rgba(238,242,247,1)'+ percent2+'%)');
+
+
     moment.locale('ru');
     let d = moment().add(z, 'month');
     $('#return-calendar').html(moment(d).format('dddd'));
@@ -83,8 +93,9 @@ $(document).ready(function(){
         $('#return-sum').html(Math.round(resSum) + ' ₽');
         $('#monthly-payment').html(Math.round(resMonth) + ' ₽');
     }
-
   }
+
+
 
 
 });

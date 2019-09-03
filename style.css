@@ -428,17 +428,12 @@ input[type='range'] {
   -webkit-appearance: none;
   height: 10px;
   /* background: #EEF2F7; */
-    background: linear-gradient(90deg, rgba(2,1,17,1) 31%, rgba(0,212,255,1) 32%);
+    background: linear-gradient(90deg, rgba(33,150,83,1) 0%, rgba(238,242,247,1) 0%);
   border-radius: 9.5px;
   outline: none;
-/* input range */
 
-input[type='range'] {
-    -webkit-appearance: none;
-    height: 10px;
-    background: #EEF2F7;
-    border-radius: 9.5px;
 }
+
 
 .calculator__range::-webkit-slider-thumb {
   -webkit-appearance: none;
