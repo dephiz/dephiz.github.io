@@ -151,15 +151,6 @@ $('#phone-input').on('input', function(){
   }
 });
 
-$('#next-btn').on('click', function(){
-  if(firstClickNextBtn){
-    firstClickNextBtn = false;
-    progressAddPercent(9);
-  } else {
-    progressAddPercent(1);
-  }
-});
-
 function progressAddPercent(count){
   let progressLine = $('.calculator-progress__line');
   currentPercent = currentPercent + count;
