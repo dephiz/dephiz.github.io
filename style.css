@@ -340,6 +340,24 @@ option[value=""][disabled] {
   background: url(images/home-icon.png) center no-repeat;
 }
 
+.card-item-title--name::before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(images/usr.png) center no-repeat;
+}
+
+.card-item-title--phone::before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(images/ph.png) center no-repeat;
+}
+
 .margin-top-26{
   margin-top: 26px;
 }
@@ -366,6 +384,41 @@ option[value=""][disabled] {
   box-sizing: border-box;
 }
 
+/* privacy */
+
+.privacy{
+  margin-top: 20px;
+}
+
+.privacy-checkbox{
+  display: none;
+}
+
+.privacy-label{
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.privacy-checkbox + .privacy-label::before{
+  cursor: pointer;
+  margin-right: 14px;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #EEF2F7;
+  border-radius: 5px;
+}
+
+.privacy-checkbox:checked + .privacy-label::before{
+  background-color: #219653;
+  background-image: url(images/chk.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 
 
 input[type='range'] {

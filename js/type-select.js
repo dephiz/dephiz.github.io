@@ -42,3 +42,17 @@ $('#home-input').on('change', function(){
     $('#home-type').text('?');
   }
 });
+
+$('#name-input').on('input', function(){
+  $('#name-type').text($(this).val());
+  if($(this).val() == ''){
+    $('#name-type').text('?');
+  }
+});
+
+$('#phone-input').on('input', function(){
+  $('#phone-type').text($(this).val());
+  if($(this).val() == ''){
+    $('#phone-type').text('?');
+  }
+});

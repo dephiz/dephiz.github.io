@@ -3,8 +3,6 @@ let maxTub = 2;
 let steps = document.getElementsByClassName("step");
 let btn = document.querySelector('#next-btn');
 
-
-
 showTab(currentTab);
 
 function showTab(n) {
@@ -13,6 +11,9 @@ function showTab(n) {
 
 function next() {
   if(++currentTab <= maxTub){
+    if(currentTab === 2){
+      addInfoToCard();
+    }
     showTab(currentTab);
   }
 }
@@ -23,4 +24,13 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class to the current step:
   steps[n].className += " step--active";
+
+  // Ставим номер шага в шапку
+  $('#step-number').text(n + 1);
+}
+
+function addInfoToCard(){
+    card = $('#card1').html();
+    $('#prev-info').empty();
+    $('#prev-info').append(card);
 }
