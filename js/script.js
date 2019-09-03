@@ -4,6 +4,7 @@ let steps = document.getElementsByClassName("step");
 let btn = document.querySelector('#next-btn');
 
 
+
 showTab(currentTab);
 
 function showTab(n) {
