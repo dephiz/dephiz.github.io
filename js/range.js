@@ -106,6 +106,14 @@ $(document).ready(function(){
   }
 
 
+$( "#calculator-close" ).click(function() {
+$('#calculator-fastrequest').hide();
+$('#calc-overlay').hide();
+});
 
+$( "#show-fastrequest" ).click(function() {
+$('#calculator-fastrequest').show();
+$('#calc-overlay').show();
+});
 
 });

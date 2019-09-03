@@ -11,6 +11,7 @@
 
 .calculator{
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .calculator-step{
@@ -491,4 +492,128 @@ color: #828282;
 
 .calculator-footer__questions-img{
   margin-top: 2px;
+}
+
+.calculator-fastrequest{
+
+  display: none;
+  position: absolute;
+  left:50%;
+  margin-left:-301px;
+  margin-top:96px;
+  width: 602px;
+height: 469px;
+  background: white;
+  z-index: 11;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-radius: 10px;
+}
+
+.calculator-fastrequest__header{
+  font-weight: bold;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+
+color: #333333;
+}
+
+.calculator-fastrequest__alert{
+  display: flex;
+}
+
+.calculator-fastrequest__alert-text{
+  margin-left: 14px;
+  font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+.calculator-fastrequest__alert-ico{
+  margin-top: 4px;
+}
+
+.calculator-fastrequest__form{
+  display: grid;
+}
+
+.calculator-fastrequest__form-fio{
+  margin-top: 25px;
+height: 50px;
+padding-left: 19px;
+background: #EEF2F7;
+border-radius: 5px;
+border: none;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+color: #828282;
+}
+
+.calculator-fastrequest__form-tel{
+  margin-top: 32px;
+  padding-left: 19px;
+height: 50px;
+
+background: #EEF2F7;
+border-radius: 5px;
+border: none;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+color: #828282;
+}
+
+.calculator-fastrequest__privacy{
+display: flex;
+margin-top: 37px;
+justify-content: space-between;
+}
+
+.calculator-fastrequest__privacy-check{
+  margin-top: 10px;
+}
+
+.calculator-fastrequest__privacy-send-btn{
+  width: 241px;
+  height: 54px;
+  font-family: 'Roboto Medium', sans-serif;
+
+  background: #FFDD2D;
+  border-radius: 5px;
+  border:none;
+
+  font-size: 18px;
+
+color: #333333;
+}
+
+#calc-overlay{
+  display: none;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: #333333;
+opacity: 0.5;
+z-index: 10;
+
+}
+
+.calculator-fastrequest__close{
+  position: absolute;
+  top: -17px;
+  left: 650px;
 }
