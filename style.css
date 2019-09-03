@@ -421,13 +421,14 @@ option[value=""][disabled] {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 
 }
-input[type='range'] {
 
+/* input range */
+
+input[type='range'] {
     -webkit-appearance: none;
     height: 10px;
-
-background: #EEF2F7;
-border-radius: 9.5px;
+    background: #EEF2F7;
+    border-radius: 9.5px;
 }
 
 .calculator__range::-webkit-slider-thumb {
