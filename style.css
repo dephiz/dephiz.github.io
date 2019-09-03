@@ -474,3 +474,21 @@ input[type='range'] {
   position: relative;
   z-index: 3;
 }
+
+.calculator-footer__questions{
+  display: flex;
+}
+
+.calculator-footer__questions-text{
+  margin-left: 10px;
+  font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+width: 767px;
+color: #828282;
+}
+
+.calculator-footer__questions-img{
+  margin-top: 2px;
+}
