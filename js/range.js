@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   //первый ползунок
+  calc();
 
   $( "#range-sum" ).mousemove(function() {
     $("#range-sum-caption").val( $(this).val() );
@@ -65,18 +66,14 @@ $(document).ready(function(){
       calc();
   });
 
-  // $( "#range-time-caption" ).change(function() {
-  //   alert();
-  //   let z =parseInt($(this).val(), 10);
-  //   let s = parseInt($('#range-sum').val(),10);
-  //   $('#return-sum').html(calcSum(z,s));
-  //   $('#monthly-payment').html(calcMonthSum(z,s));
-  //
-  // });
-
   function calc(){
     let z = parseInt($('#range-time').val(), 10);
     let s = parseInt($('#range-sum').val(), 10);
+    moment.locale('ru');
+    let d = moment().add(z, 'month');
+    $('#return-calendar').html(moment(d).format('dddd'));
+    $('#return-d').html(moment(d).format('Do MMMM'));
+    $('#return-y').html(moment(d).format('YYYY'));
     if (z == 0 || s == 0) {
       $('#return-sum').html(0 + ' ₽');
       $('#monthly-payment').html(0 + ' ₽');
@@ -89,11 +86,5 @@ $(document).ready(function(){
 
   }
 
-  // function calcMonthSum(){
-  //   let z = parseInt($('#range-time').val(), 10);
-  //   let s = parseInt($('#range-sum').val(), 10);
-  //   let res  = (s/z)+(s*0.03);
-  //   return Math.round(res);
-  // }
 
 });
