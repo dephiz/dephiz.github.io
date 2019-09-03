@@ -13,6 +13,7 @@ function next() {
   if(++currentTab <= maxTub){
     if(currentTab == 1){
       if(StepOneHasError()){
+        alert("Заполните все поля калькулятора!");
         --currentTab;
         return;
       }
@@ -21,6 +22,7 @@ function next() {
 
     if(currentTab == 2){
       if(StepTwoHasError()){
+        alert("Заполните все поля калькулятора!");
         --currentTab;
         return;
       }
@@ -30,8 +32,15 @@ function next() {
 
     if(currentTab == 3){
       if(StepThreeHasError()){
+        alert("Заполните все поля калькулятора!");
         --currentTab;
         return;
+      } else {
+        if(!$('#privacy-checkbox').prop('checked')){
+          alert('Поддвердите согласие на обработу персональных данных');
+          --currentTab;
+          return;
+        }
       }
 
       $('.calculator-step').text('Все шаги пройдены');
