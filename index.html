@@ -74,7 +74,7 @@
                   </div>
                 </div>
                 <div class="calculator__card-wrapper">
-                  <div class="calculator__card">
+                  <div id="card1" class="calculator__card">
                     <div class="calculator__card-item card-item">
                       <span class="card-item__title card-item-title--doc">Залог</span>
                       <span id="credit-type" class="card-item__val">?</span>
@@ -95,25 +95,24 @@
               <div class="calculator__row">
                 <div class="calculator__inputs-group">
                   <span class="calculator__input-label">ФИО:</span>
-                  <input id="calc-fio" class="calculator__input" class="calculator__input" type="text" placeholder="Иванов Иван Иванович">
+                  <input id="name-input" class="calculator__input" class="calculator__input" type="text" placeholder="Иванов Иван Иванович">
                   <div class="margin-top-26">
                     <span class="calculator__input-label">Телефон:</span>
-                    <input id="calc-phone" class="calculator__input" class="calculator__input" type="text" placeholder="+7 (___) ___ - __ - __">
+                    <input id="phone-input" class="calculator__input" class="calculator__input" type="text" placeholder="+7 (___) ___ - __ - __">
                   </div>
                 </div>
                 <div class="calculator__card-wrapper">
-                  <div id="last-card" class="calculator__card">
-                    <div class="calculator__card-item card-item">
-                      <span class="card-item__title card-item-title--doc">Залог</span>
-                      <span id="credit-type" class="card-item__val">?</span>
+                  <div class="calculator__card">
+                    <div id="prev-info">
+
                     </div>
-                    <div id='card-item-car' class="calculator__card-item card-item">
-                      <span class="card-item__title card-item-title--car">Модель</span>
-                      <span id="car-type" class="card-item__val">?</span>
+                    <div id='card-item-name' class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--name">ФИО:</span>
+                      <span id="name-type" class="card-item__val">?</span>
                     </div>
-                    <div id='card-item-home' class="calculator__card-item card-item">
-                      <span class="card-item__title card-item-title--home">Тип:</span>
-                      <span id="home-type" class="card-item__val">?</span>
+                    <div id='card-item-phone' class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--phone">Телефон:</span>
+                      <span id="phone-type" class="card-item__val">?</span>
                     </div>
                   </div>
                 </div>

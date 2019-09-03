@@ -340,6 +340,24 @@ option[value=""][disabled] {
   background: url(images/home-icon.png) center no-repeat;
 }
 
+.card-item-title--name::before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(images/usr.png) center no-repeat;
+}
+
+.card-item-title--phone::before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(images/ph.png) center no-repeat;
+}
+
 .margin-top-26{
   margin-top: 26px;
 }
