@@ -11,11 +11,6 @@ function showTab(n) {
 
 function next() {
   if(++currentTab <= maxTub){
-    if(currentTab > 0 && currentTab < maxTub){
-      showPrevBtn();
-    } else {
-      hidePrevBtn();
-    }
 
     if(currentTab == 1){
       if(StepOneHasError()){
@@ -23,6 +18,7 @@ function next() {
         --currentTab;
         return;
       }
+      showPrevBtn();
       $('#calculator-up-percents').text('+4% за выбор типа залога');
       progressAddPercent(9);
     }
@@ -33,6 +29,7 @@ function next() {
         --currentTab;
         return;
       }
+      showPrevBtn();
       $('#calculator-up-percents').text('+3% за ввод ФИО');
       $('#next-btn').text('Отправить');
       addInfoToCard();
@@ -51,6 +48,7 @@ function next() {
           return;
         }
       }
+      hidePrevBtn();
       $('.calculator-step').text('Все шаги пройдены');
     }
 
