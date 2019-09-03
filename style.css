@@ -365,3 +365,26 @@ option[value=""][disabled] {
   padding-left: 20px;
   box-sizing: border-box;
 }
+
+
+
+input[type='range'] {
+
+    -webkit-appearance: none;
+    height: 10px;
+
+background: #EEF2F7;
+border-radius: 9.5px;
+}
+
+.calculator__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #FFFFFF;;
+    border-radius: 50%;
+    border: 2px;
+    border: 4px solid #EEF2F7;
+    cursor: pointer;
+}
