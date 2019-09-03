@@ -27,6 +27,14 @@ function fixStepIndicator(n) {
 
   // Ставим номер шага в шапку
   $('#step-number').text(n + 1);
+
+  if(n == 1){
+    $('#calculator-up-percents').text('+4% за выбор типа залога');
+  }
+
+  if(n == 2){
+    $('#calculator-up-percents').text('3% за ввод ФИО');
+  }
 }
 
 function addInfoToCard(){

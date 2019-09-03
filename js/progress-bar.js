@@ -80,10 +80,16 @@ $('#range-time-caption').on('input', function(){
 });
 
 $('#type-select').on('change', function(){
-  if(!zalogChanged){
-    zalogChanged = true;
-    progressAddPercent(4);
-  }
+    if(!zalogChanged){
+      zalogChanged = true;
+      progressAddPercent(4);
+    }
+
+    if($(this).val() == 'pts'){
+      $('#calculator-up-percents').text('+14% за ввод марки и модели автомобиля');
+    } else {
+      $('#calculator-up-percents').text('+14% за выбор типа недвижимости');
+    }
 });
 
 $('#home-input').on('change', function(){
@@ -91,9 +97,11 @@ $('#home-input').on('change', function(){
     zalogItemChanged = true;
     progressAddPercent(14);
   }
+  $('#calculator-up-percents').text('+1% за следующий шаг');
 });
 
 $('#car-input').on('input', function(){
+  $('#calculator-up-percents').text('+1% за следующий шаг');
   if(!zalogItemChanged){
     zalogItemChanged = true;
     progressAddPercent(14);
@@ -101,16 +109,24 @@ $('#car-input').on('input', function(){
     if($(this).val() == ''){
       zalogItemChanged = false;
       progressSubtractPercent(14);
+
+      $('#calculator-up-percents').text('+14% за ввод марки и модели автомобиля');
     }
   }
 });
 
 $('#name-input').on('input', function(){
+  if($('#phone-input').val() == ''){
+    $('#calculator-up-percents').text('+3% за ввод номера телефона');
+  } else {
+    $('#calculator-up-percents').text('Отправьте заявку и мы позвоним через 10 минут !');
+  }
   if(!nameChanged){
     nameChanged = true;
     progressAddPercent(3);
   } else {
     if($(this).val() == ''){
+      $('#calculator-up-percents').text('+3% за ввод ФИО');
       nameChanged = false;
       progressSubtractPercent(3);
     }
@@ -118,11 +134,17 @@ $('#name-input').on('input', function(){
 });
 
 $('#phone-input').on('input', function(){
+  if($('#name-input').val() == ''){
+    $('#calculator-up-percents').text('3% за ввод ФИО');
+  } else {
+    $('#calculator-up-percents').text('Отправьте заявку и мы позвоним через 10 минут !');
+  }
   if(!phoneChanged){
     phoneChanged = true;
     progressAddPercent(3);
   } else {
     if($(this).val() == ''){
+      $('#calculator-up-percents').text('+3% за ввод номера телефона');
       phoneChanged = false;
       progressSubtractPercent(3);
     }
