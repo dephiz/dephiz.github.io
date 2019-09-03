@@ -38,6 +38,7 @@ $(document).ready(function(){
 
   $( "#range-sum-caption" ).keyup(function() {
     $('#range-sum').val($(this).val());
+    if ($("#range-sum-caption").val() === '') {$("#range-sum").val(0);}
     if ($(this).val() > 1000000){$('#range-sum').val(1000000); $(this).val(1000000)}
     if ($(this).val() < 0){$('#range-sum').val(0); $(this).val(0)}
       calc();
@@ -71,6 +72,7 @@ $(document).ready(function(){
 
   $( "#range-time-caption" ).keyup(function() {
     $('#range-time').val($(this).val());
+    if ($("#range-time-caption").val() === '') {$("#range-time").val(0);}
     if ($(this).val() > 36){$('#range-sum').val(36); $(this).val(36)}
     if ($(this).val() < 0){$('#range-sum').val(0); $(this).val(0)}
       calc();
