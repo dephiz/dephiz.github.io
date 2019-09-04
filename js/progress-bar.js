@@ -57,7 +57,7 @@ $('#range-sum-plus').on('click', function(){
 
 $('#range-sum-minus').on('click', function(){
   if(sumChanged){
-    if($('#range-sum-caption').val() - 10000 <= 0){
+    if($('#range-sum-caption').val() - 15000 <= 0){
       $('#calculator-up-percents').text('+23% за выбор суммы займа');
       sumChanged = false;
       stopAnimateNextBtn();
@@ -112,6 +112,15 @@ $('#range-sum-caption').on('input', function(){
       sumChanged = true;
       progressAddPercent(23);
     }
+  }
+});
+
+$('#range-sum-caption').on('change', function(){
+  if($(this).val() < 15000){
+    $(this).val(15000);
+    $('#range-sum').val(15000);
+    let p1 = $("#range-sum").val() / 1000000 * 100;
+    $("#range-sum").css('background', 'linear-gradient(90deg, rgba(33,150,83,1)'+ p1 +'%, rgba(238,242,247,1)'+ p1+'%)');
   }
 });
 

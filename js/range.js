@@ -15,7 +15,7 @@ $(document).ready(function(){
 
   $( "#range-sum-plus" ).click(function() {
     let sum  = parseInt( $("#range-sum-caption").val(), 10 );
-    let res = sum + 10000;
+    let res = sum + 15000;
     if (res > 1000000) {res = 1000000;}
     $("#range-sum-caption").val(res);
     $( "#range-sum" ).val(res);
@@ -25,7 +25,7 @@ $(document).ready(function(){
   $( "#range-sum-minus" ).click(function() {
     let sum  = parseInt( $("#range-sum-caption").val(), 10 );
 
-    let res = sum - 10000;
+    let res = sum - 15000;
     if (res < 0) {  res = 0;}
     $("#range-sum-caption").val(res);
     $( "#range-sum" ).val(res);
