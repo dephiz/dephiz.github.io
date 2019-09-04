@@ -789,6 +789,14 @@ color: #333333;
     margin-top: 20px;
     padding-bottom: 20px;
   }
+
+  .calculator-fastrequest{
+    width: 533px;
+  }
+
+  .calculator-fastrequest__close{
+    left:583px;
+  }
 }
 
 @media(max-width: 768px) {
@@ -822,6 +830,17 @@ color: #333333;
   .calculator__inputs-group {
     flex: 1 auto;
     margin-right: auto;
+  }
+  .calculator-fastrequest{
+    width: 414px;
+    height: 542px;
+    margin-left: -241px;
+  }
+  .calculator-fastrequest__close{
+    left:461px;
+  }
+  .calculator-fastrequest__privacy-send-btn{
+    width: 172px;
   }
 }
 
