@@ -1,4 +1,4 @@
-let currentTab = 0;
+let currentTab = 1;
 let maxTub = 3;
 let steps = document.getElementsByClassName("step");
 let btn = document.querySelector('#next-btn');
