@@ -10,6 +10,7 @@ function showTab(n) {
 }
 
 function next() {
+  stopAnimateNextBtn();
   if(++currentTab <= maxTub){
 
     if(currentTab == 1){
@@ -57,6 +58,7 @@ function next() {
 }
 
 function prev(){
+  animateNextBtn();
   --currentTab;
   $('#next-btn').text('Далее');
   if(currentTab == 0){
@@ -158,4 +160,12 @@ function showPrevBtn() {
 
 function hidePrevBtn() {
   $('#prev-btn').hide();
+}
+
+function animateNextBtn(){
+  $('#next-btn').addClass('animated_btn');
+}
+
+function stopAnimateNextBtn(){
+  $('#next-btn').removeClass('animated_btn');
 }
