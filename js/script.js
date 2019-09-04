@@ -58,6 +58,7 @@ function next() {
 }
 
 function prev(){
+  animateNextBtn();
   --currentTab;
   $('#next-btn').text('Далее');
   if(currentTab == 0){
