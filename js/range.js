@@ -5,7 +5,11 @@ $(document).ready(function(){
 
   $( "#range-sum" ).mousemove(function() {
     $("#range-sum-caption").val( $(this).val() );
+    calc();
+  });
 
+  $( "#range-sum" ).change(function() {
+    $("#range-sum-caption").val( $(this).val() );
     calc();
   });
 
@@ -48,7 +52,11 @@ $(document).ready(function(){
 
   $( "#range-time" ).mousemove(function() {
     $("#range-time-caption").val( $(this).val() );
+      calc();
+  });
 
+  $( "#range-time" ).change(function() {
+    $("#range-time-caption").val( $(this).val() );
       calc();
   });
 
