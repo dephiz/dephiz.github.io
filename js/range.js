@@ -109,11 +109,20 @@ $(document).ready(function(){
 $( "#calculator-close" ).click(function() {
 $('#calculator-fastrequest').hide();
 $('#calc-overlay').hide();
+$('.calculator-fastrequest__body').show();
+$('.calculator-fastrequest__result').hide();
 });
 
 $( "#show-fastrequest" ).click(function() {
 $('#calculator-fastrequest').show();
 $('#calc-overlay').show();
+
+});
+
+$( "#fastrequest-done" ).click(function() {
+$('.calculator-fastrequest__body').hide();
+$('.calculator-fastrequest__result').show();
+
 });
 
 });

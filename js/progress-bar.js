@@ -14,6 +14,9 @@ let firstClickNextBtn = true;
 // Начальное значение процента
 let currentPercent = 10;
 
+function getCurrentProcces(){
+  return currentPercent;
+}
 
 $('#range-sum').on('input', function(){
   if(!sumChanged){
