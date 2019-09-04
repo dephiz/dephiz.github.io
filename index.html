@@ -11,46 +11,55 @@
   <div class="container">
     <form action="">
       <div id="calculator" class="calculator">
-<div id="calc-overlay">
+        <div id="calc-overlay"></div>
+        <div id="calculator-fastrequest" class="calculator-fastrequest">
+          <div id="calculator-close" class="calculator-fastrequest__close">
+            <img src="images/close.png" alt="">
+          </div>
+          <p class="calculator-fastrequest__header">Быстрая заявка</p>
 
-</div>
-    <div id="calculator-fastrequest" class="calculator-fastrequest">
-      <div id="calculator-close" class="calculator-fastrequest__close">
-        <img src="images/close.png" alt="">
+          <div class="calculator-fastrequest__body">
+          <div class="calculator-fastrequest__alert">
+            <div class="calculator-fastrequest__alert-ico">
+              <img src="images/alert.png" alt="">
+            </div>
+            <div id="calc-fast-percent" class="calculator-fastrequest__alert-text">
+              Вероятность одобрения заявки 10%, вы уверены, что хотите прервать заполнение анкеты и отправить заявку так?
+            </div>
+          </div>
+
+          <div class="calculator-fastrequest__form">
+
+            <span class="calculator-fastrequest__form-label">ФИО:</span>
+            <input class="calculator-fastrequest__form-fio" type="text" name="" value="" placeholder="Иванов Иван Иванович">
+
+            <span class="calculator-fastrequest__form-label">Телефон:</span>
+            <input class="calculator-fastrequest__form-tel" type="text" name="" value="">
+
+          </div>
+
+          <div class="calculator-fastrequest__privacy">
+
+            <div class="calculator-fastrequest__privacy-check">
+              <input class="privacy-checkbox" id="privacy-checkbox-1" type="checkbox" checked >
+              <label class="privacy-label" for="privacy-checkbox-1">Я даю согласие на <br>обработку персональных данных</label>
+            </div>
+
+            <div class="calculator-fastrequest__privacy-send">
+              <button id="fastrequest-done" class="calculator-fastrequest__privacy-send-btn" type="button" name="button">Отправить</button>
+            </div>
+          </div>
+          </div>
+        <div class="calculator-fastrequest__result">
+      <div class="calculator-fastrequest__result-img">
+        <img src="images/success.png" alt="">
       </div>
-      <p class="calculator-fastrequest__header">Быстрая заявка</p>
+      <div class="calculator-fastrequest__result-text">
+        Ваша заявка успешно отправлена ! <br> В течении 10 минут наш оператор свяжется с вами
+      </div>
+        </div>
 
-
-<div class="calculator-fastrequest__alert">
-  <div class="calculator-fastrequest__alert-ico">
-    <img src="images/alert.png" alt="">
-  </div>
-  <div class="calculator-fastrequest__alert-text">
-    Вероятность одобрения заявки ...%, вы уверены, что хотите прервать заполнение анкеты и отправить заявку так?
-  </div>
-</div>
-
-<div class="calculator-fastrequest__form">
-
-  <input class="calculator-fastrequest__form-fio" type="text" name="" value="" placeholder="Иванов Иван Иванович">
-
-  <input class="calculator-fastrequest__form-tel" type="text" name="" value="">
-
-</div>
-
-<div class="calculator-fastrequest__privacy">
-
-    <div class="calculator-fastrequest__privacy-check">
-      <input class="privacy-checkbox" id="privacy-checkbox-1" type="checkbox" >
-      <label class="privacy-label" for="privacy-checkbox-1">Я даю согласие на <br>обработку персональных данных</label>
-    </div>
-
-  <div class="calculator-fastrequest__privacy-send">
-<button class="calculator-fastrequest__privacy-send-btn" type="button" name="button">Отправить</button>
-  </div>
-</div>
-
-    </div>
+        </div>
 
 
 

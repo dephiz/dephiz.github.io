@@ -231,6 +231,7 @@
   height: 60px;
   background: #FFDD2D;
   border-radius: 5px;
+  font-family: 'Roboto Medium', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -525,7 +526,7 @@ color: #828282;
   margin-left:-301px;
   margin-top:96px;
   width: 602px;
-height: 469px;
+height: 510px;
   background: white;
   z-index: 11;
   padding-left: 35px;
@@ -567,7 +568,7 @@ color: #000000;
 }
 
 .calculator-fastrequest__form-fio{
-  margin-top: 25px;
+  margin-top: 10px;
 height: 50px;
 padding-left: 19px;
 background: #EEF2F7;
@@ -582,7 +583,7 @@ color: #828282;
 }
 
 .calculator-fastrequest__form-tel{
-  margin-top: 32px;
+  margin-top: 10px;
   padding-left: 19px;
 height: 50px;
 
@@ -656,6 +657,31 @@ z-index: 10;
   text-align: center;
 }
 
+.calculator-fastrequest__form-label{
+  margin-top: 32px;
+font-size: 18px;
+color: #333333;
+}
+
+.calculator-fastrequest__result{
+  display: none;
+  margin-top: 82px;
+}
+
+.calculator-fastrequest__result-img{
+
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.calculator-fastrequest__result-text{
+  text-align: center;
+  margin-top: 14px;
+  font-size: 18px;
+
+color: #333333;
+}
 
 /* Анимация кнопки */
 .animated_btn {
