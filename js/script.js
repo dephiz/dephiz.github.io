@@ -19,6 +19,9 @@ function next() {
         --currentTab;
         return;
       }
+      if(!StepTwoHasError()){
+        animateNextBtn();
+      }
       showPrevBtn();
       $('#calculator-up-percents').text('+4% за выбор типа залога');
       progressAddPercent(9);
@@ -29,6 +32,9 @@ function next() {
         alert("Заполните все поля калькулятора!");
         --currentTab;
         return;
+      }
+      if(!StepThreeHasError()){
+        animateNextBtn();
       }
       showPrevBtn();
       $('#calculator-up-percents').text('+3% за ввод ФИО');
@@ -49,6 +55,8 @@ function next() {
           return;
         }
       }
+      $('#next-btn').hide();
+      $('.calculator-footer__questions').css({'margin-top':'40px'});
       hidePrevBtn();
       $('.calculator-step').text('Все шаги пройдены');
     }

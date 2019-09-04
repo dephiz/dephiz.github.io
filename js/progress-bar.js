@@ -211,6 +211,7 @@ $('#name-input').on('input', function(){
     if($(this).val() == ''){
       $('#calculator-up-percents').text('+3% за ввод ФИО');
       nameChanged = false;
+      stopAnimateNextBtn();
       progressSubtractPercent(3);
     }
   }
@@ -230,6 +231,7 @@ $('#phone-input').on('input', function(){
     if($(this).val() == ''){
       $('#calculator-up-percents').text('+3% за ввод номера телефона');
       phoneChanged = false;
+      stopAnimateNextBtn();
       progressSubtractPercent(3);
     }
   }
