@@ -3,7 +3,7 @@ $(document).ready(function(){
   //первый ползунок
   calc();
 
-  $( "#range-sum" ).mousemove(function() {
+  $( "#range-sum" ).change(function() {
     $("#range-sum-caption").val( $(this).val() );
 
     calc();
@@ -46,7 +46,7 @@ $(document).ready(function(){
 
   // второй ползунок
 
-  $( "#range-time" ).mousemove(function() {
+  $( "#range-time" ).change(function() {
     $("#range-time-caption").val( $(this).val() );
 
       calc();
