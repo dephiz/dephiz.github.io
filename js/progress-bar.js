@@ -24,6 +24,7 @@ $('#range-sum').on('input', function(){
       $('#calculator-up-percents').text('+23% за выбор срока займа');
     } else {
       $('#calculator-up-percents').text('+9% к следующему шагу');
+      animateNextBtn();
     }
   } else {
     if($(this).val() == 0){
@@ -56,6 +57,7 @@ $('#range-time').on('input', function(){
       $('#calculator-up-percents').text('+23% за выбор суммы займа');
     } else {
       $('#calculator-up-percents').text('+9% к следующему шагу');
+      animateNextBtn();
     }
   } else {
     if($(this).val() == 0){
@@ -98,9 +100,11 @@ $('#home-input').on('change', function(){
     progressAddPercent(14);
   }
   $('#calculator-up-percents').text('+1% за следующий шаг');
+  animateNextBtn();
 });
 
 $('#car-input').on('input', function(){
+  animateNextBtn();
   $('#calculator-up-percents').text('+1% за следующий шаг');
   if(!zalogItemChanged){
     zalogItemChanged = true;
@@ -109,7 +113,7 @@ $('#car-input').on('input', function(){
     if($(this).val() == ''){
       zalogItemChanged = false;
       progressSubtractPercent(14);
-
+      stopAnimateNextBtn();
       $('#calculator-up-percents').text('+14% за ввод марки и модели автомобиля');
     }
   }
@@ -119,6 +123,7 @@ $('#name-input').on('input', function(){
   if($('#phone-input').val() == ''){
     $('#calculator-up-percents').text('+3% за ввод номера телефона');
   } else {
+    animateNextBtn();
     $('#calculator-up-percents').text('Отправьте заявку и мы позвоним через 10 минут !');
   }
   if(!nameChanged){
@@ -137,6 +142,7 @@ $('#phone-input').on('input', function(){
   if($('#name-input').val() == ''){
     $('#calculator-up-percents').text('3% за ввод ФИО');
   } else {
+    animateNextBtn();
     $('#calculator-up-percents').text('Отправьте заявку и мы позвоним через 10 минут !');
   }
   if(!phoneChanged){
