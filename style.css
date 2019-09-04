@@ -816,12 +816,16 @@ color: #333333;
   .calculator-footer__questions {
     display: none;
   }
-}
-
-@media(max-width: 600px) {
   .calculator__card-wrapper{
     display: none;
   }
+  .calculator__inputs-group {
+    flex: 1 auto;
+    margin-right: auto;
+  }
+}
+
+@media(max-width: 600px) {
   .calculator-body {
     padding: 0 15px;
     min-height:  auto;
@@ -882,10 +886,6 @@ color: #333333;
   }
   .calculator__input-label{
     font-size: 16px;
-  }
-  .calculator__inputs-group {
-    flex: 1 auto;
-    margin-right: auto;
   }
   .calculator__select-type {
     height: 40px;
