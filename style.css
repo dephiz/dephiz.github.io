@@ -899,4 +899,7 @@ color: #333333;
   .privacy-checkbox + .privacy-label::before {
     min-width: 20px;
   }
+  .calculator-success__text {
+    font-size: 14px;
+  }
 }
