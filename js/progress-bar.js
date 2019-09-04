@@ -21,6 +21,7 @@ $('#range-sum').on('input', function(){
     progressAddPercent(23);
 
     if($('#range-time').val() == 0){
+      stopAnimateNextBtn();
       $('#calculator-up-percents').text('+23% за выбор срока займа');
     } else {
       $('#calculator-up-percents').text('+9% к следующему шагу');
@@ -30,7 +31,7 @@ $('#range-sum').on('input', function(){
     if($(this).val() == 0){
       sumChanged = false;
       progressSubtractPercent(23);
-
+      stopAnimateNextBtn();
       $('#calculator-up-percents').text('+23% за выбор суммы займа');
     }
   }
