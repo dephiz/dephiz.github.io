@@ -40,14 +40,77 @@ $('#range-sum').on('input', function(){
   }
 });
 
-$('#range-sum-caption').on('input', function(){
+$('#range-sum-plus').on('click', function(){
   if(!sumChanged){
     sumChanged = true;
     progressAddPercent(23);
-  } else {
-    if($(this).val() == 0){
+
+    if($('#range-time').val() == 0){
+      stopAnimateNextBtn();
+      $('#calculator-up-percents').text('+23% за выбор срока займа');
+    } else {
+      $('#calculator-up-percents').text('+9% к следующему шагу');
+      animateNextBtn();
+    }
+  }
+});
+
+$('#range-sum-minus').on('click', function(){
+  if(sumChanged){
+    if($('#range-sum-caption').val() - 10000 <= 0){
+      $('#calculator-up-percents').text('+23% за выбор суммы займа');
       sumChanged = false;
+      stopAnimateNextBtn();
       progressSubtractPercent(23);
+    }
+  }
+});
+
+$('#range-time-plus').on('click', function(){
+  if(!monthChanged){
+    monthChanged = true;
+    progressAddPercent(23);
+
+    if($('#range-sum').val() == 0){
+      stopAnimateNextBtn();
+      $('#calculator-up-percents').text('+23% за выбор суммы займа');
+    } else {
+      $('#calculator-up-percents').text('+9% к следующему шагу');
+      animateNextBtn();
+    }
+  }
+});
+
+$('#range-time-minus').on('click', function(){
+  if(monthChanged){
+    if($('#range-time').val() - 1 <= 0){
+      monthChanged = false;
+      stopAnimateNextBtn();
+      progressSubtractPercent(23);
+      $('#calculator-up-percents').text('+23% за выбор срока займа');
+    }
+  }
+});
+
+$('#range-sum-caption').on('input', function(){
+  if($(this).val() == 0){
+    if(sumChanged){
+      $('#calculator-up-percents').text('+23% за выбор суммы займа');
+      sumChanged = false;
+      stopAnimateNextBtn();
+      progressSubtractPercent(23);
+    }
+  } else {
+    if(!sumChanged){
+      if($('#range-time').val() == 0){
+        stopAnimateNextBtn();
+        $('#calculator-up-percents').text('+23% за выбор срока займа');
+      } else {
+        $('#calculator-up-percents').text('+9% к следующему шагу');
+        animateNextBtn();
+      }
+      sumChanged = true;
+      progressAddPercent(23);
     }
   }
 });
@@ -74,13 +137,24 @@ $('#range-time').on('input', function(){
 });
 
 $('#range-time-caption').on('input', function(){
-  if(!monthChanged){
-    monthChanged = true;
-    progressAddPercent(23);
-  } else {
-    if($(this).val() == ''){
+  if($(this).val() == 0){
+    if(monthChanged){
+      $('#calculator-up-percents').text('+23% за выбор срока займа');
       monthChanged = false;
+      stopAnimateNextBtn();
       progressSubtractPercent(23);
+    }
+  } else {
+    if(!monthChanged){
+      if($('#range-sum').val() == 0){
+        stopAnimateNextBtn();
+        $('#calculator-up-percents').text('+23% за выбор суммы займа');
+      } else {
+        $('#calculator-up-percents').text('+9% к следующему шагу');
+        animateNextBtn();
+      }
+      monthChanged = true;
+      progressAddPercent(23);
     }
   }
 });
