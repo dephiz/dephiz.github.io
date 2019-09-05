@@ -2,12 +2,12 @@ $(document).ready(function(){
 
   //первый ползунок
   calc();
-
-  $( "#range-sum" ).mousemove(function() {
-    $("#range-sum-caption").val( $(this).val() );
-    calc();
-  });
-
+  
+    $( "#range-sum" ).mousemove(function() {
+      $("#range-sum-caption").val( $(this).val() );
+      calc();
+    });
+  
   $( "#range-sum" ).change(function() {
     $("#range-sum-caption").val( $(this).val() );
     calc();
@@ -32,9 +32,11 @@ $(document).ready(function(){
       calc();
   });
 
-  $( "#range-sum-caption" ).blur(function() {
-    if ($("#range-sum-caption").val() === '') {$("#range-sum-caption").val('0');$("#range-sum").val(0);calc();}
-  });
+
+    $( "#range-sum-caption" ).blur(function() {
+      if ($("#range-sum-caption").val() === '') {$("#range-sum-caption").val('0');$("#range-sum").val(0);calc();}
+    });
+
 
   $( "#range-time-caption" ).blur(function() {
     if ($("#range-time-caption").val() === ''){$("#range-time-caption").val('0');$("#range-time").val(0);calc();}

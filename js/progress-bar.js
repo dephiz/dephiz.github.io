@@ -7,6 +7,7 @@ let zalogChanged = false;
 let zalogItemChanged = false;
 let nameChanged = false;
 let phoneChanged = false;
+let zalogItemYearChanged = false;
 
 // first click next button
 let firstClickNextBtn = true;
@@ -175,7 +176,7 @@ $('#type-select').on('change', function(){
     }
 
     if($(this).val() == 'pts'){
-      $('#calculator-up-percents').text('+14% за ввод марки и модели автомобиля');
+      $('#calculator-up-percents').text('+10% за ввод марки и модели автомобиля');
     } else {
       $('#calculator-up-percents').text('+14% за выбор типа недвижимости');
     }
@@ -192,16 +193,40 @@ $('#home-input').on('change', function(){
 
 $('#car-input').on('input', function(){
   animateNextBtn();
-  $('#calculator-up-percents').text('+1% за следующий шаг');
   if(!zalogItemChanged){
     zalogItemChanged = true;
-    progressAddPercent(14);
+    progressAddPercent(10);
+    if($('#car-year-input').val() == ''){
+      $('#calculator-up-percents').text('+4% за ввод года автомобиля');
+    } else {
+      $('#calculator-up-percents').text('+1% за следующий шаг');
+    }
   } else {
     if($(this).val() == ''){
       zalogItemChanged = false;
-      progressSubtractPercent(14);
+      progressSubtractPercent(10);
       stopAnimateNextBtn();
-      $('#calculator-up-percents').text('+14% за ввод марки и модели автомобиля');
+      $('#calculator-up-percents').text('+10% за ввод марки и модели автомобиля');
+    }
+  }
+});
+
+$('#car-year-input').on('input', function(){
+  animateNextBtn();
+  if(!zalogItemYearChanged){
+    zalogItemYearChanged = true;
+    progressAddPercent(4);
+    if($('#car-input').val() == ''){
+      $('#calculator-up-percents').text('+10% за ввод марки и модели автомобиля');
+    } else {
+      $('#calculator-up-percents').text('+1% за следующий шаг');
+    }
+  } else {
+    if($(this).val() == ''){
+      zalogItemYearChanged = false;
+      progressSubtractPercent(4);
+      stopAnimateNextBtn();
+      $('#calculator-up-percents').text('+4% за ввод года автомобиля');
     }
   }
 });

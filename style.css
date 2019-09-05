@@ -435,6 +435,15 @@ option[value=""][disabled] {
   background: url(images/car-icon.png) center no-repeat;
 }
 
+.card-item-title--year::before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(images/year.png) center no-repeat;
+}
+
 .card-item-title--home::before{
   content: '';
   display: inline-block;
@@ -466,13 +475,25 @@ option[value=""][disabled] {
   margin-top: 26px;
 }
 
-#card-item-home, #card-item-car{
+#card-item-home, #card-item-car, #card-item-car-year{
   display: none;
 }
 
 .step__auto, .step__home{
   display: none;
   margin-top: 26px;
+}
+
+.step__auto{
+  justify-content: space-between;
+}
+
+.step__auto-type{
+
+}
+
+.step__auto-year{
+  width: 155px;
 }
 
 .calculator__input{

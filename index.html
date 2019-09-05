@@ -77,7 +77,7 @@
               <div class="calculator__range-group">
                 <div class="calculator__range-group-title">Сколько нужно?</div>
                 <div class="calculator__range-items">
-                  <input class="calculator__range" type="range" id="range-sum" name="range" step="15000" min="0" max="1000000" value="0">
+                  <input class="calculator__range" type="range" id="range-sum" name="range" step="20000" min="0" max="1000000" value="0">
                 </div>
                 <div class="calculator__range-input-group">
                   <input class="calculator__range-input a" type="number" id="range-sum-caption" name="" value="0" min="0" max="1000000">
@@ -113,8 +113,14 @@
                     </select>
                   </div>
                   <div class="step__auto">
-                    <span class="calculator__input-label">Марка и модель авто:</span>
-                    <input id="car-input" class="calculator__input" class="calculator__input" type="text" placeholder="Введите марку и модель автомобиля">
+                    <div class="step__auto-type">
+                      <span class="calculator__input-label">Марка и модель авто:</span>
+                      <input id="car-input" class="calculator__input" class="calculator__input" type="text" placeholder="Введите марку и модель автомобиля">
+                    </div>
+                    <div class="step__auto-year">
+                      <span class="calculator__input-label">Год:</span>
+                      <input id="car-year-input" class="calculator__input" class="calculator__input" type="text" placeholder="2017 г.">
+                    </div>
                   </div>
                   <div class="step__home">
                     <span class="calculator__input-label">Тип недвижимости:</span>
@@ -133,12 +139,16 @@
                 <div class="calculator__card-wrapper">
                   <div id="card1" class="calculator__card">
                     <div class="calculator__card-item card-item">
-                      <span class="card-item__title card-item-title--doc">Залог</span>
+                      <span class="card-item__title card-item-title--doc">Залог:</span>
                       <span id="credit-type" class="card-item__val">?</span>
                     </div>
                     <div id='card-item-car' class="calculator__card-item card-item">
-                      <span class="card-item__title card-item-title--car">Модель</span>
+                      <span class="card-item__title card-item-title--car">Модель:</span>
                       <span id="car-type" class="card-item__val">?</span>
+                    </div>
+                    <div id='card-item-car-year' class="calculator__card-item card-item">
+                      <span class="card-item__title card-item-title--year">Год:</span>
+                      <span id="car-year-type" class="card-item__val">?</span>
                     </div>
                     <div id='card-item-home' class="calculator__card-item card-item">
                       <span class="card-item__title card-item-title--home">Тип:</span>
@@ -253,6 +263,7 @@
   <script>
     $('#phone-input').inputmask("+7 (999) 99-99-999");
     $('#fastphone-input').inputmask("+7 (999) 99-99-999");
+    $('#car-year-input').inputmask("9999 г.")
   </script>
 </body>
 </html>

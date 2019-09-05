@@ -9,14 +9,16 @@ $(select).on('change', function() {
 
   let cardHome = $('#card-item-home');
   let cardCar = $('#card-item-car');
+  let cardCarYear = $('#card-item-car-year');
 
   if(type == 'pts'){
     $('#credit-type').text('ПТС');
     $(homeBlock).css({'display':'none'});
-    $(autoBlock).css({'display':'block'});
+    $(autoBlock).css({'display':'flex'});
 
     $(cardHome).css({'display':'none'});
     $(cardCar).css({'display':'flex'});
+    $(cardCarYear).css({'display':'flex'});
   }
 
   if(type == 'home'){
@@ -26,6 +28,7 @@ $(select).on('change', function() {
 
     $(cardHome).css({'display':'flex'});
     $(cardCar).css({'display':'none'});
+    $(cardCarYear).css({'display':'none'});
   }
 });
 
@@ -33,6 +36,13 @@ $('#car-input').on('input', function(){
   $('#car-type').text($(this).val());
   if($(this).val() == ''){
     $('#car-type').text('?');
+  }
+});
+
+$('#car-year-input').on('input', function(){
+  $('#car-year-type').text($(this).val());
+  if($(this).val() == ''){
+    $('#car-year-type').text('?');
   }
 });
 
