@@ -910,6 +910,9 @@ color: #333333;
     line-height: 54px;
     font-size: 18px;
   }
+  .step__auto-type {
+    margin-right: 20px;
+  }
   .calculator__range-group-title {
     top: -24px;
     font-size: 16px;
