@@ -55,7 +55,7 @@ function next() {
           return;
         }
       }
-      $('#next-btn').hide();
+      $('#next-btn').parent().hide();
       $('.calculator-footer__questions').css({'margin-top':'40px'});
       hidePrevBtn();
       $('.calculator-step').text('Все шаги пройдены');
