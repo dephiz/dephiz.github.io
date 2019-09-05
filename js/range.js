@@ -2,12 +2,18 @@ $(document).ready(function(){
 
   //первый ползунок
   calc();
-  
+
     $( "#range-sum" ).mousemove(function() {
       $("#range-sum-caption").val( $(this).val() );
       calc();
     });
-  
+
+    $( "#range-sum" ).on('input',function() {
+      $("#range-sum-caption").val( $(this).val() );
+      calc();
+    });
+
+
   $( "#range-sum" ).change(function() {
     $("#range-sum-caption").val( $(this).val() );
     calc();
@@ -53,6 +59,11 @@ $(document).ready(function(){
   // второй ползунок
 
   $( "#range-time" ).mousemove(function() {
+    $("#range-time-caption").val( $(this).val() );
+      calc();
+  });
+
+  $( "#range-time" ).on('input',function() {
     $("#range-time-caption").val( $(this).val() );
       calc();
   });
