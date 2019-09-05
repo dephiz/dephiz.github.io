@@ -893,8 +893,8 @@ color: #333333;
 @media(max-width: 600px) {
   .calculator-body {
     padding: 0 15px;
-    min-height: 311px;
-    padding-bottom: 47px;
+    min-height: 226px;
+    padding-bottom: 30px;
   }
   .calculator-progress__titile {
     font-size: 14px;
